@@ -49,7 +49,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('md', function() {
-  gulp.src('./docs/markdown-content.md')
+  gulp.src('./docs/index.md')
   .pipe(gulp.dest('./build/'));
 });
 
@@ -65,4 +65,5 @@ gulp.task('default', ['serve', 'build'], function() {
   gulp.watch('docs/scss/**/*.scss', ['styles']);
   gulp.watch('docs/*.html', browserSync.reload);
   gulp.watch('docs/js/**/*.js', browserSync.reload);
+  gulp.watch('docs/*.md', browserSync.reload);
 });
