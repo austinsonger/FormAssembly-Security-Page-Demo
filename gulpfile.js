@@ -49,7 +49,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('md', function() {
-  gulp.src('./docs/index.md')
+  gulp.src('./docs/markdown-content.md')
   .pipe(gulp.dest('./build/'));
 });
 
